@@ -7,19 +7,21 @@ var config = {
   "noticeMessage": "",
   "enableRecording": false,
   "resolution": 720,
-  "constraints": {"video": {
-    "width": {
-      "ideal": 1280,
-      "min": 426,
-      "max": 3840
-    },
-    "aspectRatio": 16 / 9,
-    "height": {
-      "ideal": 720,
-      "min": 360,
-      "max": 1080
+  "constraints": {
+    "video": {
+      "width": {
+        "ideal": 1280,
+        "min": 426,
+        "max": 3840
+      },
+      "aspectRatio": 16 / 9,
+      "height": {
+        "ideal": 720,
+        "min": 360,
+        "max": 1080
+      }
     }
-  }},
+  },
   "hiddenDomain": "recorder.pade.chat",
   "videoQuality": {
     "minHeightForQualityLvl": {
@@ -27,11 +29,13 @@ var config = {
       "180": "low",
       "360": "standard"
     },
-    "maxBitratesVideo": {"VP9": {
-      "standard": 500000,
-      "high": 1500000,
-      "low": 200000
-    }},
+    "maxBitratesVideo": {
+      "VP9": {
+        "standard": 500000,
+        "high": 1500000,
+        "low": 200000
+      }
+    },
     "preferredCodec": "VP9"
   },
   "enableP2P": true,
@@ -39,7 +43,7 @@ var config = {
   "minHDHeight": 540,
   "enableLayerSuspension": true,
   "websocket": "wss://pade.chat:5443/ws/",
-  "startAudioMuted": 9,
+  "startAudioMuted": 0, // Poner en silencio a todos los participantes por defecto
   "enableForcedReload": true,
   "desktopSharingFrameRate": {
     "min": 5,
@@ -73,7 +77,7 @@ var config = {
   "bosh": "https://pade.chat:5443/http-bind/",
   "enableNoAudioDetection": true,
   "useNewBandwidthAllocationStrategy": true,
-  "defaultLanguage": "en",
+  "defaultLanguage": "es",
   "useRoomAsSharedDocumentName": false,
   "recordingType": "colibri",
   "clientNode": "http://igniterealtime.org/ofmeet/jitsi-meet/",
@@ -83,7 +87,7 @@ var config = {
   "logStats": false,
   "useRtcpMux": true,
   "requireDisplayName": true,
-  "startVideoMuted": 9,
+  "startVideoMuted": 0, // Desactivar la cámara por defecto para todos los participantes
   "adaptiveSimulcast": false,
   "iceServers": "{'iceServers':[{'url': 'stun:jitsi.free-solutions.org:3479'},{url: 'turn:jitsi.free-solutions.org:3479', credential: 'tatafutz',username: 'turnuser'}]}",
   "ofmeetWebAuthnEnabled": false,
